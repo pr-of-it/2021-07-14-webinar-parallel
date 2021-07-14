@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  php:
+    build:
+      context: ./.build/docker/php
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - "80:8080"
